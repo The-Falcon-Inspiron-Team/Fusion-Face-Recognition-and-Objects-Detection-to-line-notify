@@ -263,24 +263,24 @@ while True:
                cv2.polylines(frame,angle4,0,(0,0,255),3)
 
 # บันทึกภาพเข้าโฟลเดอร์                            
-               img_name = "PICTURE_1/image_{}.jpg".format(img_counter)
+               img_name_1 = "PICTURE_1/image_{}.jpg".format(img_counter)
                Picture_1 = cv2.resize(frame , (0,0), fx=0.6,fy=0.6) # fx=0.5,fy=0.5
-               cv2.imwrite(img_name, Picture_1) # small_frame
-               #print("{} written!".format(img_name))
+               cv2.imwrite(img_name_1, Picture_1) # small_frame
+               #print("{} written!".format(img_name_1))
                img_counter += 1
                #number += 1
-               #print("{} written!".format(img_name))
+               #print("{} written!".format(img_name_1))
 
                #number_name = "ลำดับที่ : {} ".format(img_counter)
                number_name = "{}".format(img_counter)
-               A = ("{} written!".format(img_name))
+               A = ("{} written!".format(img_name_1))
                B = number_name 
                print("ตรวจใบหน้าที่ : " + B)
                
 
 # ส่ง LINE
-               Pic_Notify_1 = img_name   # format(img_name)
-               #notify.send("ลำดับที่ : "+ B + "\nชื่อ: " + Notify1 + "\nตำแหน่ง:  "+ Notify2 + "\nหน่วยงาน: "+ Notify3 +"\nความถูกต้อง : "+str(percent)+" %"+"\n ⬇️ ", Pic_Notify_1 )
+               Pic_Notify_1 = img_name_1   # format(img_name_1)
+               notify.send("ลำดับที่ : "+ B + "\nชื่อ: " + Notify1 + "\nตำแหน่ง:  "+ Notify2 + "\nหน่วยงาน: "+ Notify3 +"\nความถูกต้อง : "+str(percent)+" %"+"\n ⬇️ ", Pic_Notify_1 )
                #notify.send("ตรวจพบใบหน้า \nชื่อ: " + Notify1 + "\nตำแหน่ง:  "+ Notify2 + "\nหน่วยงาน: "+ Notify3 +"\nความถูกต้อง : "+str(percent)+" %"+"\n  ", )
 
 
