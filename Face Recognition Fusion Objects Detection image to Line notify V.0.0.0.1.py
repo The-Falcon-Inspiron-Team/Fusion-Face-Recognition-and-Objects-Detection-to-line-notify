@@ -1,3 +1,5 @@
+# ใช้ pip install opencv-python==4.6.0.66
+
 import cv2
 import numpy as np
 import face_recognition as face
